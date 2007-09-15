@@ -2,7 +2,7 @@
 
 Name:		perl-%{realname}
 Version:    0.05
-Release:    %mkrel 1
+Release:    %mkrel 2
 License:	Artistic and GPL
 Group:		Development/Perl
 Summary:    Library for enabling X-WSSE authentication in LWP
