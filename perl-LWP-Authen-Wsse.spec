@@ -1,17 +1,19 @@
-%define realname   LWP-Authen-Wsse
+%define module  LWP-Authen-Wsse
+%define name    perl-%{module}
+%define version 0.05
+%define release %mkrel 2
 
-Name:		perl-%{realname}
-Version:    0.05
-Release:    %mkrel 2
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
 License:	Artistic and GPL
 Group:		Development/Perl
 Summary:    Library for enabling X-WSSE authentication in LWP
-Source0:    ftp://ftp.perl.org/pub/CPAN/modules/by-module/LWP/LWP-Authen-Wsse-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{realname}
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:	perl-devel
-
-BuildArch: noarch
+Url:		http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/LWP/%{module}-%{version}.tar.bz2
+BuildRequires:	perl(Digest::SHA1)
+BuildArch:      noarch
+BuildRoot:  	%{_tmppath}/%{name}-%{version}
 
 %description
 LWP::Authen::Wsse allows LWP to authenticate against servers that are using 
@@ -28,11 +30,11 @@ the X-WSSE authentication scheme, as required by the Atom Authentication API.
 make test
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
