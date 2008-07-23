@@ -1,7 +1,7 @@
 %define module  LWP-Authen-Wsse
 %define name    perl-%{module}
 %define version 0.05
-%define release %mkrel 2
+%define release %mkrel 4
 
 Name:		%{name}
 Version:	%{version}
