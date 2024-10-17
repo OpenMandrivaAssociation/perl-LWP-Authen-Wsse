@@ -8,7 +8,7 @@ Release:	5
 Summary:	Library for enabling X-WSSE authentication in LWP
 License:	Artistic and GPL+
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/LWP/%{upstream_name}-%{upstream_version}.tar.bz2
 
 BuildRequires:	perl-devel
